@@ -24,8 +24,8 @@ per-site designs:
 
 | File | What |
 |---|---|
-| `index.html` | Arabic-first landing (RTL): hero, client proof strip, 5-service gateway (UGC campaigns, influencer PR, content production, performance marketing, social media management — each tied back to the hub, with editorial links to prinfluencer.net and filmorax.com), Egypt coverage strip (Cairo · Giza · 6th of October · New Cairo · Obour · Maadi · Nasr City · Alexandria · Mansoura · Tanta), why influUGC (with editorial links to influugc.com and explorinfluencer.com), 4-step process, 6-question answer-first FAQ, contact/CTA band, network footer. |
-| `en.html` | Full English mirror (LTR), same structure and FAQ. |
+| `index.html` | Arabic-first landing (RTL): hero, client proof strip, **guides section (3 content-first guides — see retrofit note below)**, 5-service gateway (UGC campaigns, influencer PR, content production, performance marketing, social media management — each tied back to the hub, with editorial links to prinfluencer.net and filmorax.com), Egypt coverage strip (Cairo · Giza · 6th of October · New Cairo · Obour · Maadi · Nasr City · Alexandria · Mansoura · Tanta), why influUGC (with editorial links to influugc.com and explorinfluencer.com), 4-step process, 6-question answer-first FAQ, contact/CTA band, network footer. |
+| `en.html` | Full English mirror (LTR), same structure, guides and FAQ. |
 | `404.html` | Branded not-found page (Arabic). |
 
 Plus: `styles.css`, `favicon.svg` (black + lime E1 mark), `sitemap.xml`
@@ -48,6 +48,28 @@ Plus: `styles.css`, `favicon.svg` (black + lime E1 mark), `sitemap.xml`
 - Booking → `https://www.influugc.com/book?utm_source=egyone&utm_medium=satellite&utm_campaign=network`
 - WhatsApp (client line) → `https://wa.me/201029979797?utm_source=egyone&utm_medium=satellite&utm_campaign=network`
 - Footer legal line: "Part of the influUGC network" linking to the hub.
+
+## Content-first retrofit (Nov 6, 2026)
+
+Retrofitted to the owner's Nov 6 content-first model (sites lead with useful
+tips/guides/information for search engines + AI answers, with influUGC services
+and real work woven in), following the aistore guides implementation:
+
+- **Guides section is now section 01** on both homepages (after the proof
+  strip, before services); the later sections renumbered 02–05. Header nav and
+  the footer gained a Guides column, mirroring aistore.
+- **3 guides per homepage (AR + EN), answer-first, zero invented figures:**
+  1. `#guide-agency` — how to choose a marketing agency in Egypt (questions to
+     ask before signing + red flags).
+  2. `#guide-ugc` — UGC for Egyptian brands: what works in the Egyptian market
+     (dialect, creator fit, the price question, WhatsApp endings, seasonality).
+  3. `#guide-cities` — marketing in Cairo vs Alexandria vs the Delta:
+     practical differences in creators, filming locations, seasonal calendars.
+- Each guide closes with a soft woven-in influUGC line + the standard central
+  CTAs (book + WhatsApp, `utm_source=egyone`). Guide styles added to
+  `styles.css` (same block as aistore). `llms.txt` gained a Guides section.
+- `sitemap.xml` unchanged — guides are anchor sections on the existing URLs,
+  no new pages.
 
 ## What remains (not done here)
 
