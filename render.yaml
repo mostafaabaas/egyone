@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: egyone
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
