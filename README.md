@@ -1,96 +1,84 @@
-# egy.one — Egypt gateway of influUGC (static landing site)
+# egy.one — Egypt gateway (static landing site)
 
-The Egypt gateway brand of **influUGC**: the dedicated entry point for Egyptian
-brands to all of the agency's services. Built Nov 6, 2026 (owner activation
+The Egypt gateway for Egyptian brands, part of the **influUGC** network: one
+door to UGC campaigns, influencer relations, content production, performance
+marketing and social media management. Built Nov 6, 2026 (owner activation
 order Nov 6 — first of three: egy.one → riyadheventshub.com → aistore.design).
-**Files only — not deployed.**
 
-## Design direction (owner rule, Nov 5, 2026 — 23:57)
+## Identity (owner rule for ALL network satellites)
 
-**ALL network satellite sites use the main influUGC identity** — no distinct
-per-site designs:
+**ALL network satellite sites use the main influUGC identity:**
 
-- Black background `#000`, neon lime accent `#C8FF00`, dark panels, bold heavy
-  typography — the www.influugc.com feel. Design system mirrored from the
-  prinfluencer.net satellite.
-- Brand lockup: `egy.one` wordmark with the subline "The Egypt gateway of
-  influUGC" (Arabic: «بوابة مصر من influUGC»).
-- Only real company data: est. 2020, Arab League St Agouza (Giza 12651),
-  Egypt-first market, real client names (Riyadh Season, Saudi Tourism
-  Authority, flynas, Saudia, realme, Domino's, TikTok Live, Zanussi). No
-  prices, no invented figures, no testimonials, no stock imagery (CSS/text only).
+- Black background `#000`, neon lime accent `#C8FF00`, dark panels `#0A0A0A`,
+  IBM Plex Sans Arabic (AR pages) / Sora + Inter (EN pages). Lime buttons
+  always carry **black** text.
+- Brand lockup: `egy.one` wordmark with the subline "The gateway for
+  Egyptian brands" (Arabic: «بوابة البراندات المصرية»).
+- Real company data only: Egyptian team in this market since 2020, Arab
+  League St, Agouza (Giza 12651), Egypt-first market. **No portfolio or
+  works sections anywhere on the site** (owner order, Nov 6, 2026), no
+  prices, no invented figures, no testimonials, no stock imagery
+  (CSS/text only).
+
+## Layout system (restructure, Nov 6, 2026)
+
+The v1 design was rejected by the owner (loose big text, no defined frames,
+no organized sections) and the site was fully restructured:
+
+- Fixed 1200px container; **every content block sits inside a framed panel**
+  (1px solid `#1E1E1E`, `#0A0A0A` background, 16px radius). No unframed text.
+- Uniform section anatomy: lime eyebrow label + H2 (≤40px) + one short lead
+  line (≤68ch); sections separated by hairlines; 8pt spacing scale; body
+  16–17px; hero headline ≤56px.
+- Hero = two framed columns: text panel (badge chip, H1, lead, dual CTA,
+  fact chips) + a pure-CSS **request-path visual panel** (4 mini steps +
+  stat tiles). No images.
+- Coverage = framed city grid. Services = bordered card grid. Guides =
+  article cards (category chip + title + excerpt + key points). FAQ =
+  framed rows. CTA = framed lime-glow panel.
+- Composition deliberately differs from the other satellites: egy.one leads
+  with its Egypt coverage grid, has no process section, and carries its own
+  copy written for the Egyptian market only.
 
 ## Pages built (3 HTML pages, 2 languages)
 
 | File | What |
 |---|---|
-| `index.html` | Arabic-first landing (RTL): hero, client proof strip, **guides section (3 content-first guides — see retrofit note below)**, 5-service gateway (UGC campaigns, influencer PR, content production, performance marketing, social media management — each tied back to the hub, with editorial links to prinfluencer.net and filmorax.com), Egypt coverage strip (Cairo · Giza · 6th of October · New Cairo · Obour · Maadi · Nasr City · Alexandria · Mansoura · Tanta), why influUGC (with editorial links to influugc.com and explorinfluencer.com), 4-step process, 6-question answer-first FAQ, contact/CTA band, network footer. |
-| `en.html` | Full English mirror (LTR), same structure, guides and FAQ. |
-| `404.html` | Branded not-found page (Arabic). |
+| `index.html` | Arabic-first landing (RTL): hero with request-path panel → 01 Coverage (framed grid of 10 cities/districts: Cairo · Giza · 6th of October · New Cairo · Obour · Maadi · Nasr City · Alexandria · Mansoura · Tanta + a framed market note) → 02 Services (5 cards: UGC campaigns, influencer PR, content production, performance marketing, social media management) → 03 Egypt market guides (3 cards: choosing an agency in Egypt, UGC that works in Egypt, Cairo vs Alexandria vs the Delta) → 04 FAQ (6 questions) → CTA panel → network footer. |
+| `en.html` | Full English mirror (LTR), same composition. |
+| `404.html` | Framed not-found panel (Arabic) with booking + WhatsApp CTAs. |
 
 Plus: `styles.css`, `favicon.svg` (black + lime E1 mark), `sitemap.xml`
 (hreflang-annotated), `robots.txt`, `llms.txt`.
 
 ## SEO / GEO
 
-- Canonical base `https://egy.one/` (the real domain — if this site is first
-  deployed to an `onrender.com` URL before the domain attaches, switch all
-  canonical/OG/sitemap/robots/llms bases in one pass, same as the ugccompany
-  rule in `../DEPLOY.md` §2).
-- Title/meta target UGC + influencer marketing + Egypt in both languages;
-  OpenGraph + Twitter cards; hreflang ar/en both ways.
-- JSON-LD: `Organization` (with `parentOrganization: influUGC`, postal address,
-  areaServed Egypt, the four real social profiles), `WebSite`, and `FAQPage`
-  matching each page's visible FAQ word for word.
+- Canonical base `https://egy.one/`; OpenGraph + Twitter cards; hreflang
+  ar/en both ways.
+- JSON-LD: `Organization` (with `parentOrganization: influUGC`, postal
+  address, areaServed Egypt, the four real social profiles), `WebSite`, and
+  `FAQPage` matching each page's visible FAQ exactly.
+- `llms.txt` carries the services, coverage, the 4-step request path and
+  guide summaries.
 
 ## CTAs (all carry the satellite UTM set)
 
 - Booking → `https://www.influugc.com/book?utm_source=egyone&utm_medium=satellite&utm_campaign=network`
 - WhatsApp (client line) → `https://wa.me/201029979797?utm_source=egyone&utm_medium=satellite&utm_campaign=network`
-- Footer legal line: "Part of the influUGC network" linking to the hub.
-
-## Content-first retrofit (Nov 6, 2026)
-
-Retrofitted to the owner's Nov 6 content-first model (sites lead with useful
-tips/guides/information for search engines + AI answers, with influUGC services
-and real work woven in), following the aistore guides implementation:
-
-- **Guides section is now section 01** on both homepages (after the proof
-  strip, before services); the later sections renumbered 02–05. Header nav and
-  the footer gained a Guides column, mirroring aistore.
-- **3 guides per homepage (AR + EN), answer-first, zero invented figures:**
-  1. `#guide-agency` — how to choose a marketing agency in Egypt (questions to
-     ask before signing + red flags).
-  2. `#guide-ugc` — UGC for Egyptian brands: what works in the Egyptian market
-     (dialect, creator fit, the price question, WhatsApp endings, seasonality).
-  3. `#guide-cities` — marketing in Cairo vs Alexandria vs the Delta:
-     practical differences in creators, filming locations, seasonal calendars.
-- Each guide closes with a soft woven-in influUGC line + the standard central
-  CTAs (book + WhatsApp, `utm_source=egyone`). Guide styles added to
-  `styles.css` (same block as aistore). `llms.txt` gained a Guides section.
-- `sitemap.xml` unchanged — guides are anchor sections on the existing URLs,
-  no new pages.
+- The only influUGC references on the site: the footer network line
+  («جزء من شبكة influUGC» / "Part of the influUGC network") + these CTAs.
 
 ## What remains (not done here)
 
-1. **Pull the $200 sale listing** — egy.one is currently designated for sale at
-   $200 in the new Namecheap account; remove that listing in the new-account
-   session so the domain is a network asset, not sale stock.
-2. **Deploy** — static folder; any static host or a Render Static Site (free
-   tier per the network rule). No server/admin in this build: the brief scoped
-   a static landing.
-3. **Domain attach** — point `egy.one` DNS at the host (same checklist pattern
-   as `../DEPLOY.md` §4: apex A + www CNAME from the host's screen; no MX
-   changes — mail stays on influugc.com).
-4. After go-live: dedicated Google Search Console property + submit
-   `sitemap.xml`; verify both pages return 200 and the FAQ renders.
+1. **Domain attach** — egy.one DNS records are recorded in
+   `../DNS-BATCH.md`; they are set in the new-account (`influugc`) registrar
+   session, after which Render verifies + issues the certificate.
+2. After go-live on the real domain: dedicated Google Search Console
+   property + submit `sitemap.xml`.
 
 ## Deploy status (Nov 6, 2026)
 
-- **Repo**: https://github.com/mostafaabaas/egyone (private, branch `main`) — source pushed Nov 6, 2026.
-- **Hosting**: PENDING-DASHBOARD — the Render Static Site service has **not** been created yet.
-  Creating it requires the Render dashboard (no Render API key is available to the
-  automation): Render Dashboard → New → Static Site → connect this repo — the repo's
-  `render.yaml` blueprint pre-fills the service name (`egyone`) and publish path (`.`).
-  Expected live URL once created: https://egyone.onrender.com
-- **Domain attach**: separate later batch (see "What remains" item 3 above).
+- **Repo**: https://github.com/mostafaabaas/egyone (public, branch `main`).
+- **Hosting**: LIVE — Render Static Site (free tier), auto-deploys from
+  `main`: https://egyone.onrender.com (verified live).
+- **Domain attach**: pending the DNS batch above.
