@@ -175,6 +175,18 @@ h1,h2,h3{font-family:var(--font-display);font-weight:700;color:var(--teal-dark)}
 .g-foot a{font-weight:800;white-space:nowrap;color:var(--terra)}
 .g-foot a:hover{color:var(--teal)}
 
+/* ---------- full guide panel ---------- */
+.guide-full{margin-top:20px;border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);scroll-margin-top:96px}
+.guide-full .g-tag{display:inline-block;border:1px solid rgba(14,90,80,.35);color:var(--teal);border-radius:999px;padding:3px 13px;font-size:12px;font-weight:800;background:var(--teal-soft)}
+.guide-full h3{font-size:22px;font-weight:800;line-height:1.45;margin-top:12px}
+.guide-full>p{color:var(--ink-soft);font-size:15.5px;line-height:1.75;margin-top:10px}
+.guide-full>p b{color:var(--ink)}
+.guide-full h4{font-size:17px;font-weight:700;margin-top:24px;line-height:1.5}
+.guide-full .woven{margin-top:22px;padding-top:16px;border-top:1px dashed var(--line-strong);font-size:15px}
+.guide-full .woven a{font-weight:800;color:var(--terra)}
+.guide-full .woven a:hover{color:var(--teal)}
+@media(max-width:640px){.guide-full{padding:24px 20px}}
+
 /* ---------- FAQ ---------- */
 .faq-list{display:grid;gap:12px}
 .faq-item{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow)}
